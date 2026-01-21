@@ -1,5 +1,10 @@
-import streamlit as st
+import os
 import torch
+try: 
+    torch.classes.__path__= []
+except AttributeError:
+    pass
+import streamlit as st
 import torch.nn as nn
 from torchvision import models, transforms
 from PIL import Image
